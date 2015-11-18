@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.6.0">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -173,21 +173,21 @@
 </library>
 <library name="MF_Passives">
 <packages>
-<package name="CP6.3MM">
-<description>&lt;b&gt;Description:&lt;/b&gt; 6.3MM Round Package for Electrolytic Capacitors. Based on Panasonic Electrolytic Capacitors.&lt;br&gt;</description>
-<smd name="P$1" x="0" y="-2.7" dx="3.2" dy="1.6" layer="1" rot="R90"/>
-<smd name="P$2" x="0" y="2.7" dx="3.2" dy="1.6" layer="1" rot="R90"/>
-<wire x1="1.1" y1="3.3" x2="3.3" y2="3.3" width="0.127" layer="21"/>
-<wire x1="3.3" y1="3.3" x2="3.3" y2="-2.3" width="0.127" layer="21"/>
-<wire x1="3.3" y1="-2.3" x2="2.3" y2="-3.3" width="0.127" layer="21"/>
-<wire x1="2.3" y1="-3.3" x2="1.1" y2="-3.3" width="0.127" layer="21"/>
-<wire x1="-1.1" y1="3.3" x2="-3.3" y2="3.3" width="0.127" layer="21"/>
-<wire x1="-3.3" y1="3.3" x2="-3.3" y2="-2.3" width="0.127" layer="21"/>
-<wire x1="-3.3" y1="-2.3" x2="-2.3" y2="-3.3" width="0.127" layer="21"/>
-<wire x1="-2.3" y1="-3.3" x2="-1.1" y2="-3.3" width="0.127" layer="21"/>
-<wire x1="2" y1="-1.5" x2="2" y2="-2.5" width="0.127" layer="21"/>
-<wire x1="1.5" y1="-2" x2="2.5" y2="-2" width="0.127" layer="21"/>
-<text x="-3.3" y="5" size="0.8128" layer="25" font="vector" ratio="16">&gt;NAME</text>
+<package name="CP4MM">
+<description>&lt;b&gt;Description:&lt;/b&gt; 4MM Round Package for Electrolytic Capacitors. Based on Panasonic Electrolytic Capacitors.&lt;br&gt;</description>
+<smd name="P$2" x="0" y="1.75" dx="2.5" dy="1.6" layer="1" rot="R90"/>
+<smd name="P$1" x="0" y="-1.75" dx="2.5" dy="1.6" layer="1" rot="R90"/>
+<wire x1="-1.2" y1="2.2" x2="-2.2" y2="2.2" width="0.127" layer="21"/>
+<wire x1="-2.2" y1="2.2" x2="-2.2" y2="-1.56360625" width="0.127" layer="21"/>
+<wire x1="-2.2" y1="-1.56360625" x2="-1.56360625" y2="-2.2" width="0.127" layer="21"/>
+<wire x1="-1.56360625" y1="-2.2" x2="-1.1" y2="-2.2" width="0.127" layer="21"/>
+<wire x1="1.2" y1="2.2" x2="2.2" y2="2.2" width="0.127" layer="21"/>
+<wire x1="2.2" y1="2.2" x2="2.2" y2="-1.56360625" width="0.127" layer="21"/>
+<wire x1="2.2" y1="-1.56360625" x2="1.56360625" y2="-2.2" width="0.127" layer="21"/>
+<wire x1="1.56360625" y1="-2.2" x2="1.2" y2="-2.2" width="0.127" layer="21"/>
+<text x="-2.2" y="3.5" size="0.8128" layer="25" font="vector" ratio="16">&gt;NAME</text>
+<wire x1="1.5" y1="-0.5" x2="1.5" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="2" y1="-1" x2="1" y2="-1" width="0.127" layer="21"/>
 </package>
 <package name="C0805">
 <description>&lt;b&gt;Description:&lt;/b&gt; Standard 0805 Package for Capacitors&lt;br/&gt;</description>
@@ -484,11 +484,11 @@ design rules under a new name.</description>
 </autorouter>
 <elements>
 <element name="J1" library="PP_Connectors" package="NMJ6HCD2" value="NMJ6HCD2" x="0" y="62.23" rot="R180"/>
-<element name="C1" library="MF_Passives" package="CP6.3MM" value="10uF" x="77.724" y="29.464" smashed="yes" rot="R90">
+<element name="C1" library="MF_Passives" package="CP4MM" value="10uF" x="77.724" y="29.464" smashed="yes" rot="R90">
 <attribute name="TOLERANCE" value="N/A" x="176.784" y="73.914" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MFG#" value="N/A" x="176.784" y="73.914" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="VOTLAGE" value="N/A" x="176.784" y="73.914" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="74.424" y="25.066" size="0.8128" layer="25" font="vector" ratio="16"/>
+<attribute name="VOLTAGE" value="N/A" x="77.724" y="29.464" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="C2" library="MF_Passives" package="C0805" value="0.1uF" x="80.772" y="34.544" smashed="yes" rot="R180">
 <attribute name="TOLERANCE" value="N/A" x="50.292" y="148.844" size="1.778" layer="27" rot="R180" display="off"/>
@@ -575,11 +575,11 @@ design rules under a new name.</description>
 </element>
 <element name="BATT1" library="PP_Connectors" package="12BH611-GR" value="12BH611-GR" x="1.524" y="47.752"/>
 <element name="LEVEL" library="PP_Electromechanical" package="PTD901" value="PTD901-2015K-A104" x="32.766" y="67.056" rot="R180"/>
-<element name="C6" library="MF_Passives" package="CP6.3MM" value="10uF" x="51.562" y="59.182" smashed="yes">
+<element name="C6" library="MF_Passives" package="CP4MM" value="10uF" x="51.562" y="59.182" smashed="yes">
 <attribute name="TOLERANCE" value="N/A" x="103.632" y="-39.878" size="1.778" layer="27" display="off"/>
 <attribute name="MFG#" value="N/A" x="103.632" y="-39.878" size="1.778" layer="27" display="off"/>
-<attribute name="VOTLAGE" value="N/A" x="103.632" y="-39.878" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="46.484" y="61.642" size="0.8128" layer="25" font="vector" ratio="16"/>
+<attribute name="VOLTAGE" value="N/A" x="51.562" y="59.182" size="1.778" layer="27" display="off"/>
 </element>
 <element name="SW1" library="PP_Electromechanical" package="FOOT_SW" value="FOOT_SW" x="42.1767" y="0" smashed="yes">
 <attribute name="NAME" x="35.8267" y="15.494" size="1.016" layer="25" font="vector" ratio="16"/>
@@ -631,7 +631,7 @@ design rules under a new name.</description>
 <wire x1="61.468" y1="20.776" x2="61.468" y2="17.526" width="0.4064" layer="1"/>
 <via x="61.468" y="17.526" extent="1-16" drill="0.6" shape="square"/>
 <via x="49.276" y="57.15" extent="1-16" drill="0.6" shape="square"/>
-<wire x1="51.562" y1="56.482" x2="51.562" y2="57.15" width="0.4064" layer="1"/>
+<wire x1="51.562" y1="57.432" x2="51.562" y2="57.15" width="0.4064" layer="1"/>
 <wire x1="51.562" y1="57.15" x2="49.276" y2="57.15" width="0.4064" layer="1"/>
 <contactref element="ATTACK" pad="P$3"/>
 </signal>
@@ -647,11 +647,11 @@ design rules under a new name.</description>
 <contactref element="C1" pad="P$2"/>
 <contactref element="R1" pad="P$1"/>
 <contactref element="U1" pad="P$1"/>
-<wire x1="75.024" y1="29.464" x2="75.504" y2="29.464" width="0.4064" layer="1"/>
+<wire x1="75.974" y1="29.464" x2="75.504" y2="29.464" width="0.4064" layer="1"/>
 <wire x1="75.504" y1="29.464" x2="75.504" y2="34.544" width="0.4064" layer="1"/>
 <wire x1="69.834" y1="26.99" x2="73.26265625" y2="26.99" width="0.4064" layer="1"/>
 <wire x1="73.26265625" y1="26.99" x2="75.024" y2="28.75134375" width="0.4064" layer="1" curve="90"/>
-<wire x1="75.024" y1="28.75134375" x2="75.024" y2="29.464" width="0.4064" layer="1"/>
+<wire x1="75.024" y1="28.75134375" x2="75.974" y2="29.464" width="0.4064" layer="1"/>
 </signal>
 <signal name="N$2">
 <contactref element="C3" pad="P$2"/>
@@ -779,9 +779,9 @@ design rules under a new name.</description>
 </signal>
 <signal name="N$9">
 <contactref element="C6" pad="P$2"/>
-<wire x1="51.562" y1="61.14" x2="51.562" y2="61.882" width="0.4064" layer="1"/>
+<wire x1="51.562" y1="61.14" x2="51.562" y2="60.932" width="0.4064" layer="1"/>
 <contactref element="ATTACK" pad="P$2"/>
-<wire x1="51.562" y1="61.882" x2="51.562" y2="67.0306" width="0.4064" layer="1"/>
+<wire x1="51.562" y1="60.932" x2="51.562" y2="67.0306" width="0.4064" layer="1"/>
 <wire x1="51.562" y1="67.0306" x2="51.5874" y2="67.056" width="0.4064" layer="1" curve="-90"/>
 </signal>
 <signal name="N$13">
@@ -795,16 +795,16 @@ design rules under a new name.</description>
 <signal name="N$14">
 <contactref element="C1" pad="P$1"/>
 <contactref element="C2" pad="P$1"/>
-<wire x1="81.722" y1="34.544" x2="81.722" y2="29.906" width="0.4064" layer="1"/>
-<wire x1="81.722" y1="29.906" x2="81.28" y2="29.464" width="0.4064" layer="1"/>
-<wire x1="81.28" y1="29.464" x2="80.424" y2="29.464" width="0.4064" layer="1"/>
+<wire x1="81.722" y1="34.544" x2="81.722" y2="30.54129375" width="0.4064" layer="1"/>
+<wire x1="81.722" y1="30.54129375" x2="80.64470625" y2="29.464" width="0.4064" layer="1" curve="-90"/>
+<wire x1="80.64470625" y1="29.464" x2="79.474" y2="29.464" width="0.4064" layer="1"/>
 <contactref element="SW1" pad="1"/>
 <wire x1="52.3367" y1="6.858" x2="52.5907" y2="6.604" width="0.4064" layer="16"/>
 <wire x1="52.5907" y1="6.604" x2="57.15" y2="6.604" width="0.4064" layer="16"/>
 <via x="57.15" y="6.604" extent="1-16" drill="0.6" shape="square"/>
-<wire x1="57.15" y1="6.604" x2="62.731796875" y2="6.604" width="0.4064" layer="1"/>
-<wire x1="62.731796875" y1="6.604" x2="80.424" y2="24.296203125" width="0.4064" layer="1" curve="90"/>
-<wire x1="80.424" y1="24.296203125" x2="80.424" y2="29.464" width="0.4064" layer="1"/>
+<wire x1="57.15" y1="6.604" x2="61.969796875" y2="6.604" width="0.4064" layer="1"/>
+<wire x1="61.969796875" y1="6.604" x2="79.662" y2="27.852203125" width="0.4064" layer="1" curve="90"/>
+<wire x1="79.662" y1="27.852203125" x2="79.474" y2="29.464" width="0.4064" layer="1"/>
 </signal>
 </signals>
 </board>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.6.0">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1632,7 +1632,7 @@
 </classes>
 <parts>
 <part name="J1" library="PP_Connectors" deviceset="TRS_SWITCHED" device="NMJ6HCD2" value="NMJ6HCD2"/>
-<part name="C1" library="MF_Passives" deviceset="CAPACITOR_P" device="_6.3MM" value="10uF"/>
+<part name="C1" library="MF_Passives" deviceset="CAPACITOR_P" device="_4MM" value="10uF"/>
 <part name="C2" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0805" value="0.1uF"/>
 <part name="R1" library="MF_Passives" deviceset="RESISTOR" device="_0805" value="10K"/>
 <part name="U1" library="MF_Discrete_Semiconductor" deviceset="PNP_BJT" device="_SOT-23-3" value="MMBT3906"/>
@@ -1650,7 +1650,7 @@
 <part name="R7" library="MF_Passives" deviceset="RESISTOR" device="_0805" value="100K"/>
 <part name="BATT1" library="PP_Connectors" deviceset="BATTERY" device="12BH611-GR" value="12BH611-GR"/>
 <part name="LEVEL" library="PP_Electromechanical" deviceset="POTENTIOMETER" device="PTD901" value="PTD901-2015K-A104"/>
-<part name="C6" library="MF_Passives" deviceset="CAPACITOR_P" device="_6.3MM" value="10uF"/>
+<part name="C6" library="MF_Passives" deviceset="CAPACITOR_P" device="_4MM" value="10uF"/>
 <part name="SW1" library="PP_Electromechanical" deviceset="SPDT" device="FOOT_SW" value="FOOT_SW"/>
 <part name="ATTACK" library="PP_Electromechanical" deviceset="POTENTIOMETER" device="PTD901" value="PTD901-2015K-B102"/>
 <part name="U$1" library="PP_Aesthetics" deviceset="LHE_FRAME" device="">
