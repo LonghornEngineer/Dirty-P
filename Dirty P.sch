@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.6.0">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1896,7 +1896,7 @@
 </classes>
 <parts>
 <part name="INPUT" library="PP_Connectors" deviceset="TRS_SWITCHED" device="_NMJ6HCD2" value="NMJ6HCD2"/>
-<part name="C1" library="MF_Passives" deviceset="CAPACITOR_P" device="_6.3MM" value="RSS1E100MCN1GS"/>
+<part name="C1" library="MF_Passives" deviceset="CAPACITOR_P" device="_4MM" value="10uF"/>
 <part name="C2" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0805" value="0.1uF"/>
 <part name="R1" library="MF_Passives" deviceset="RESISTOR" device="_0805" value="10K"/>
 <part name="U1" library="MF_Discrete_Semiconductor" deviceset="PNP_BJT" device="_SOT-23-3" value="MMBT3906"/>
@@ -1910,11 +1910,11 @@
 <part name="R6" library="MF_Passives" deviceset="RESISTOR" device="_0805" value="470"/>
 <part name="OUTPUT" library="PP_Connectors" deviceset="TRS_SWITCHED" device="_NMJ6HCD2" value="NMJ6HCD2"/>
 <part name="C4" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0805" value="0.01uF"/>
-<part name="C5" library="MF_Passives" deviceset="CAPACITOR_P" device="_8MM" value="RPS1H470MCN1GS"/>
+<part name="C5" library="MF_Passives" deviceset="CAPACITOR_P" device="_8MM" value="50uF"/>
 <part name="R7" library="MF_Passives" deviceset="RESISTOR" device="_0805" value="100K"/>
 <part name="BATT1" library="PP_Connectors" deviceset="BATTERY" device="_12BH611-GR" value="12BH611-GR"/>
 <part name="LEVEL" library="PP_Electromechanical" deviceset="POTENTIOMETER" device="PTD901" value="PTD901-2015K-A104"/>
-<part name="C6" library="MF_Passives" deviceset="CAPACITOR_P" device="_6.3MM" value="RSS1E100MCN1GS"/>
+<part name="C6" library="MF_Passives" deviceset="CAPACITOR_P" device="_4MM" value="10uF"/>
 <part name="SW1" library="PP_Electromechanical" deviceset="SPDT" device="_FOOT_SW" value="FOOT_SW"/>
 <part name="ATTACK" library="PP_Electromechanical" deviceset="POTENTIOMETER" device="PTD901" value="PTD901-2015K-B102"/>
 <part name="U$1" library="PP_Aesthetics" deviceset="LHE_FRAME" device="">
@@ -1924,8 +1924,9 @@
 <part name="R8" library="MF_Passives" deviceset="RESISTOR" device="_0805" value="100K"/>
 <part name="BIAS" library="PP_Passives" deviceset="POTENTIOMETER" device="_3224J" value="3224J-1-503E"/>
 <part name="SW2" library="PP_Electromechanical" deviceset="SPDT" device="_108-0020-EVX" value="108-0020-EVX"/>
-<part name="C7" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0805" value="0.005uF"/>
+<part name="C7" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0805" value="0.001uF"/>
 <part name="EM1" library="PP_Electromechanical" deviceset="DPDT_RELAY" device="_IM_RELAY" value="6-1462037-4"/>
+<part name="R9" library="MF_Passives" deviceset="RESISTOR" device="_0805" value="50K"/>
 </parts>
 <sheets>
 <sheet>
@@ -1963,6 +1964,7 @@
 <instance part="SW2" gate="G$1" x="154.94" y="81.28" rot="MR180"/>
 <instance part="C7" gate="G$1" x="170.18" y="66.04" rot="R180"/>
 <instance part="EM1" gate="G$1" x="-20.32" y="30.48"/>
+<instance part="R9" gate="G$1" x="152.4" y="53.34"/>
 </instances>
 <busses>
 </busses>
@@ -2168,13 +2170,15 @@
 </net>
 <net name="N$13" class="0">
 <segment>
-<pinref part="LEVEL" gate="G$1" pin="1"/>
 <wire x1="160.02" y1="60.96" x2="160.02" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="P$1"/>
 <pinref part="C7" gate="G$1" pin="P$1"/>
-<wire x1="160.02" y1="58.42" x2="160.02" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="160.02" y1="58.42" x2="170.18" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="170.18" y1="58.42" x2="170.18" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="58.42" x2="144.78" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="58.42" x2="144.78" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="R9" gate="G$1" pin="P$1"/>
+<wire x1="144.78" y1="53.34" x2="147.32" y2="53.34" width="0.1524" layer="91"/>
 <junction x="160.02" y="58.42"/>
 </segment>
 </net>
@@ -2241,6 +2245,14 @@
 <pinref part="EM1" gate="G$1" pin="POS"/>
 <pinref part="SW1" gate="G$1" pin="1"/>
 <wire x1="-22.86" y1="30.48" x2="-30.48" y2="30.48" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="R9" gate="G$1" pin="P$2"/>
+<pinref part="LEVEL" gate="G$1" pin="1"/>
+<wire x1="157.48" y1="53.34" x2="160.02" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="53.34" x2="160.02" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
