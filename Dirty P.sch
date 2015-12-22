@@ -995,6 +995,22 @@
 <wire x1="-2.6" y1="-3" x2="-2.6" y2="-1.7" width="0.127" layer="21"/>
 <wire x1="-2.6" y1="-1.7" x2="-5" y2="-1.7" width="0.127" layer="21"/>
 </package>
+<package name="108-0020-EVX">
+<pad name="P$1" x="0" y="0" drill="1.4" shape="long"/>
+<pad name="P$2" x="0" y="3.81" drill="1.4" shape="long"/>
+<pad name="P$3" x="0" y="7.62" drill="1.4" shape="long"/>
+<pad name="P$4" x="-2.54" y="-12.7" drill="1.4"/>
+<pad name="P$5" x="2.54" y="-12.7" drill="1.4"/>
+<wire x1="-3.429" y1="8.89" x2="-3.429" y2="-11.43" width="0.127" layer="21"/>
+<wire x1="-3.429" y1="8.89" x2="3.429" y2="8.89" width="0.127" layer="21"/>
+<wire x1="3.429" y1="8.89" x2="3.429" y2="-11.43" width="0.127" layer="21"/>
+<wire x1="-3.429" y1="-13.97" x2="-3.175" y2="-13.97" width="0.127" layer="21"/>
+<wire x1="-3.175" y1="-13.97" x2="3.175" y2="-13.97" width="0.127" layer="21"/>
+<wire x1="3.175" y1="-13.97" x2="3.429" y2="-13.97" width="0.127" layer="21"/>
+<wire x1="-3.175" y1="-13.97" x2="-3.175" y2="-21.336" width="0.127" layer="48"/>
+<wire x1="-3.175" y1="-21.336" x2="3.175" y2="-21.336" width="0.127" layer="48"/>
+<wire x1="3.175" y1="-21.336" x2="3.175" y2="-13.97" width="0.127" layer="48"/>
+</package>
 </packages>
 <symbols>
 <symbol name="POTENTIOMETER">
@@ -1118,6 +1134,16 @@
 </technologies>
 </device>
 <device name="_ET03MD1AVBE" package="ET03MD1AVBE">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$3"/>
+<connect gate="G$1" pin="C" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="_108-0020-EVX" package="108-0020-EVX">
 <connects>
 <connect gate="G$1" pin="1" pad="P$1"/>
 <connect gate="G$1" pin="2" pad="P$3"/>
@@ -1797,8 +1823,9 @@
 <wire x1="-1" y1="-0.45" x2="-1" y2="-1.2" width="0.127" layer="48"/>
 <wire x1="-1" y1="-1.2" x2="-1" y2="-1.95" width="0.127" layer="48"/>
 <wire x1="-2.3" y1="-0.45" x2="-2.3" y2="-1.2" width="0.127" layer="48"/>
-<text x="-3" y="-1.2" size="0.8128" layer="48" font="vector" ratio="16" rot="SR0" align="center-right">ADJUSTMENT -&gt;</text>
+<text x="-5.54" y="-1.2" size="0.8128" layer="48" font="vector" ratio="16" align="center-right">ADJUSTMENT</text>
 <wire x1="-2.3" y1="-1.2" x2="-2.3" y2="-1.95" width="0.127" layer="48"/>
+<text x="-4.445" y="-1.2" size="0.8128" layer="21" font="vector" ratio="16" rot="SR0" align="center-left">-&gt;</text>
 </package>
 </packages>
 <symbols>
@@ -1896,7 +1923,7 @@
 </part>
 <part name="R8" library="MF_Passives" deviceset="RESISTOR" device="_0805" value="100K"/>
 <part name="BIAS" library="PP_Passives" deviceset="POTENTIOMETER" device="_3224J" value="3224J-1-503E"/>
-<part name="SW2" library="PP_Electromechanical" deviceset="SPDT" device="_ET03MD1AVBE" value="ET01MD1AVBE"/>
+<part name="SW2" library="PP_Electromechanical" deviceset="SPDT" device="_108-0020-EVX" value="108-0020-EVX"/>
 <part name="C7" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0805" value="0.005uF"/>
 <part name="EM1" library="PP_Electromechanical" deviceset="DPDT_RELAY" device="_IM_RELAY" value="6-1462037-4"/>
 </parts>
@@ -2071,14 +2098,9 @@
 <wire x1="63.5" y1="76.2" x2="63.5" y2="81.28" width="0.1524" layer="91"/>
 <junction x="63.5" y="81.28"/>
 <pinref part="EM1" gate="G$1" pin="NEG"/>
-<wire x1="-22.86" y1="20.32" x2="-27.94" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="-27.94" y1="20.32" x2="-53.34" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="-22.86" y1="20.32" x2="-53.34" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="-53.34" y1="20.32" x2="-53.34" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="-53.34" y1="81.28" x2="30.48" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="SW1" gate="G$1" pin="2"/>
-<wire x1="-30.48" y1="25.4" x2="-27.94" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="-27.94" y1="25.4" x2="-27.94" y2="20.32" width="0.1524" layer="91"/>
-<junction x="-27.94" y="20.32"/>
 <junction x="30.48" y="81.28"/>
 </segment>
 </net>
