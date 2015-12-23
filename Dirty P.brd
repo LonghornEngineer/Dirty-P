@@ -683,7 +683,7 @@ design rules under a new name.</description>
 <attribute name="TEMP_COF" value="N/A" x="36.83" y="59.436" size="1.778" layer="27" display="off"/>
 </element>
 <element name="EM1" library="PP_Electromechanical" package="IM_RELAY" value="6-1462037-4" x="32.766" y="51.054" rot="R180"/>
-<element name="R9" library="MF_Passives" package="R0805" value="50K" x="33.528" y="62.23" rot="R90">
+<element name="R9" library="MF_Passives" package="R0805" value="51K" x="33.528" y="62.23" rot="R90">
 <attribute name="TOLERANCE" value="N/A" x="33.528" y="62.23" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MFG#" value="N/A" x="33.528" y="62.23" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VOLTAGE" value="N/A" x="33.528" y="62.23" size="1.778" layer="27" rot="R90" display="off"/>
